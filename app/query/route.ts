@@ -13,14 +13,6 @@ async function listInvoices() {
  	return data;
  }
 
- async function deleteStuff() {
-  const data = await sql`
-    SELECT * FROM customers; 
-  `;
-
-  return data;
-}
-
 export async function GET() {
    try {
    	return Response.json(await listInvoices());
